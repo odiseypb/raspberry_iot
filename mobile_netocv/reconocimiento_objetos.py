@@ -7,8 +7,9 @@ from gpiozero import LED
 led = LED(17)  # GPIO donde es conectado el LED
 
 # Cargar modelo preentrenado (MobileNet SSD)
-prototxt = "MobileNetSSD_deploy.prototxt"
-caffemodel = "MobileNetSSD_deploy.caffemodel"
+#modelo descargado de: https://github.com/MediosZ/MobileNet-SSD/blob/master/mobilenet/MobileNetSSD_deploy.prototxt
+prototxt = "./data/MobileNetSSD_deploy.prototxt"
+caffemodel = "./data/MobileNetSSD_deploy.caffemodel"
 net = cv2.dnn.readNetFromCaffe(prototxt, caffemodel)
 
 # Lista de clases reconocidas
@@ -56,3 +57,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
