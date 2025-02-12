@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>buzzers</title>
+</head>
+
+<body>
+
+<h1>buzzer</h1>
+    <h1>controlar Buzzer<h]/>
+    <button onclick="controlar_buzzer('on')">Encender</button>
+    <button onclick="controlar_buzzer('off')">Apagar</button>
+
+</body>
+<script>
+    function controlar_buzzer(action){
+        fetch("/buzzer_control"),{
+            method:'POST',
+            headers:{'Content-Type':'application/x-www-form-urlencoded'},
+            body:'action='+action
+        });
+    }
+</script>
+</html>
+
+
+
