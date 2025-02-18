@@ -14,7 +14,7 @@
 </body>
 <script>
     function controlar_buzzer(action){
-        fetch("/buzzer_control"),{
+        fetch("/buzzer_control",{
             method:'POST',
             headers:{'Content-Type':'application/x-www-form-urlencoded'},
             body:'action='+action
