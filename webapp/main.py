@@ -9,7 +9,7 @@ buzzer = Buzzer(18)
 @app.route("/")
 def home():
     
-    return render_template("temp_buzzer2.html")
+    return render_template("template_buzzer.html")
 
 @app.route("/buzzer_control",methods=["POST"])
 def buzzer_control():
